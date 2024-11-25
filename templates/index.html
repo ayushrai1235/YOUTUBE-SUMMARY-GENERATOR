@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .loading {
+            color: #4CAF50;
+        }
+        .summary, .transcript {
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Video Summarizer</h1>
+    <div class="form-container">
+        <form id="summarizer-form">
+            <label for="youtube-url">YouTube Video URL:</label>
+            <input type="text" id="youtube-url" name="youtube_url" placeholder="Enter YouTube video URL" required>
+            <button type="submit">Get Summary</button>
+        </form>
+        <div class="result-container">
+            <div class="loading" id="loading" style="display: none;">Processing... Please wait.</div>
+            <h3>Summary:</h3>
+            <div class="summary" id="summary"></div>
+            <h3>Transcript:</h3>
+            <div class="transcript" id="transcript"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
