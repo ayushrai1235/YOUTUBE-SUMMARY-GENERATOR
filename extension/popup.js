@@ -9,9 +9,9 @@ btn.addEventListener("click", function() {
         xhr.onload = function() {
             var text = xhr.responseText;
             const p = document.getElementById("output");
-            p.innerHTML = text;
+            p.innerText = text;
             btn.disabled = false;
-            btn.innerHTML = "Summarise";
+            btn.innerText = "Summarise";
         }
         xhr.send();
     });
