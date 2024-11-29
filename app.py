@@ -24,19 +24,19 @@ Summarize the following transcript in less than 400 words:
 def summary_api():
     url = request.args.get('url', '')
     if not url:
-        return jsonify({"error": "No URL provided"}), 400
+         return "Error: No URL provided.", 400
     
     try:
         video_id = extract_video_id(url)
         transcript = get_transcript(video_id)
         summary = generate_summary(transcript, prompt)
-        return jsonify({"summary": summary}), 200
+        return summary, 200 
     except ValueError as e:
-        return jsonify({"error": str(e)}), 400
+        return f"Error: {str(e)}", 400
     except TranscriptsDisabled:
-        return jsonify({"error": "Transcript is disabled for this video."}), 400
+       return "Error: Transcript is disabled for this video.", 400
     except Exception as e:
-        return jsonify({"error": f"Error generating summary: {str(e)}"}), 500
+       return f"Error generating summary: {str(e)}", 500
 
 # Function to extract video ID from the URL
 def extract_video_id(youtube_url):
