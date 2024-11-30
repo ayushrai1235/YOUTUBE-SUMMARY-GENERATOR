@@ -101,7 +101,7 @@ Add a text-to-speech feature to convert summaries into audio for users who prefe
 ---
 
 ## **Contributing**
-Contributions are welcome! If you’d like to contribute:
+Contributors are welcome! If you’d like to contribute:
 1. Fork this repository.
 2. Create a feature branch:
    ```bash
