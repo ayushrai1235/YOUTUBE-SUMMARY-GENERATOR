@@ -64,7 +64,7 @@ def get_transcript(video_id):
 # Function to generate summary using Google Gemini API
 def generate_summary(transcript_text, prompt):
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(prompt + transcript_text)
         return response.text
     except Exception as e:
